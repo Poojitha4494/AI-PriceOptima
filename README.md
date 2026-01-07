@@ -566,6 +566,7 @@ The dashboard allows users to enter the following inputs:
 The dashboard sends user inputs to the FastAPI `/predict` endpoint.  
 The predicted price returned by the API is displayed on the UI in real time.
 
+
 ---
 
 ### Dashboard Functionality (Short Explanation)
@@ -589,6 +590,13 @@ This demonstrates real-time model inference and seamless backend–frontend inte
 - React dashboard displays real-time recommended pricing.  
 - End-to-end integration between the model, backend, and frontend is achieved.
 
+## Screenshots
+
+### FastAPI Swagger UI
+![Swagger](screenshots/swagger_predict_success.png)
+
+### React Dashboard – Price Prediction
+![Dashboard](screenshots/dashboard_prediction.png)
 ---
 
 ### Conclusion and Future Enhancements
