@@ -596,7 +596,7 @@ This demonstrates real-time model inference and seamless backend–frontend inte
 ![Swagger](swagger_ui_success.png.png)
 
 ### React Dashboard – Price Prediction
-![Dashboard](dasboard_ui.png.png)
+![dashboard](dashboard_ui.png.png)
 ---
 
 ### Conclusion and Future Enhancements
