@@ -134,160 +134,141 @@ Profit Difference
 The Custom Walmart Sales Dataset is clean, validated, and ready for dynamic pricing analysis.
 All KPIs needed for Milestone 1 are implemented and prepared for future ML modeling.
 
-# 🧠 Feature Engineering – PriceOptima Dynamic Pricing Project
+# PriceOptima – Feature Engineering & Dynamic Pricing
 
-## 📌 Overview
-This milestone focuses on **Feature Engineering**, a critical step in the PriceOptima Dynamic Pricing Project.  
-The objective of this phase is to transform raw data into **meaningful, structured, and model-ready features** that help capture:
+## Project Overview
+This notebook implements the **Feature Engineering phase** of the **PriceOptima Dynamic Pricing Project**.  
+The objective of this stage is to transform raw customs sales data into a **model-ready dataset** by capturing demand patterns, pricing behavior, seasonality, inventory conditions, competitor influence, and profitability.
 
-- Demand behavior
-- Pricing trends
-- Seasonality & time effects
-- Inventory conditions
-- Competitive influence
-- Profitability impact
-
-All required feature engineering tasks have been successfully implemented.
+The output of this notebook is a fully engineered dataset that can be directly used for **machine learning models** and **dynamic pricing analysis**.
 
 ---
 
-## 🎯 Objective
-- Enhance raw data with informative features
-- Improve model understanding of real-world pricing dynamics
-- Prepare a clean, structured dataset for modeling and deployment
+## Dataset Description
+The dataset contains historical sales and operational data with the following key columns:
+
+- `Date`
+- `Product ID`
+- `Units Sold`
+- `Price`
+- `Revenue`
+- `Cost Price`
+- `Stock Level`
+- `Warehouse/Store ID`
+- `Competitor Price`
+- `Competitor Name`
+- (Optional) `Category`
 
 ---
 
-## 🧩 Feature Engineering Tasks Completed
+## Feature Engineering Steps Performed
 
----
-
-## 1️⃣ Time-Based Features
-To capture seasonality and temporal demand patterns, the following features were created:
-
-- Day
-- Month
+### 1. Time-Based Features
+Extracted features to capture seasonality and weekly demand patterns:
 - Year
-- Day of Week
-- Weekend Indicator
-- Season (e.g., Summer / Monsoon / Winter)
-- Festival / Holiday Indicator
-
-These features help identify demand fluctuations over time.
-
----
-
-## 2️⃣ Price-Based Features
-To model pricing behavior and changes:
-
-- Lag Price (Previous Day)
-- Lag Price (7-Day)
-- Price Change Percentage
-- Discount Percentage
-
-These features allow the model to understand short-term price movements and discount effects.
+- Month
+- Day
+- Weekday
+- Weekend flag
+- Season (Winter, Summer, Monsoon, Festive)
+- Festival/Holiday indicator
 
 ---
 
-## 3️⃣ Demand Features (Lag & Rolling)
-To capture demand trends and variability:
-
-- Lag Sales (1-Day, 7-Day, 30-Day)
-- Rolling Average Sales (7-Day, 30-Day)
-- Demand Volatility (Standard Deviation of Sales)
-
-These features help model momentum, seasonality, and uncertainty in demand.
+### 2. Demand Features (Lag & Rolling)
+Created features to understand historical demand trends:
+- Lag sales (1-day, 7-day, 30-day)
+- Rolling averages (7-day, 30-day)
+- Demand volatility (rolling standard deviation)
 
 ---
 
-## 4️⃣ Price Elasticity Features
-To understand customer sensitivity to price changes:
-
-- Price Elasticity Calculation
-- Elasticity Classification:
-  - High Elasticity
-  - Medium Elasticity
-  - Low Elasticity
-
-This enables differentiated pricing strategies across products.
+### 3. Price-Based Features
+Engineered features to capture pricing behavior:
+- Revenue per unit
+- Price change percentage
+- Lag price (previous day)
+- Discount percentage
 
 ---
 
-## 5️⃣ Competitor Features (Where Available)
-To incorporate market competition:
-
-- Competitor Price Difference
-- Competitor Price Index
-- Competitor-Cheaper Indicator
-
-These features allow pricing decisions to respond to competitor behavior.
+### 4. Price Elasticity
+Calculated elasticity to understand how demand reacts to price changes:
+- Elasticity value
+- Elasticity classification (High / Medium / Low)
 
 ---
 
-## 6️⃣ Inventory Features
-To align pricing with stock conditions:
-
-- Inventory Ratio
-- Days Until Stock-Out
-- Low-Stock Indicator
-- Overstock Indicator
-
-These features ensure inventory-aware pricing decisions.
+### 5. Competitor Features
+Incorporated competitive pricing signals:
+- Competitor price difference
+- Competitor index
+- Competitor cheaper indicator
 
 ---
 
-## 7️⃣ Profit Features
-To balance revenue and profitability:
-
-- Profit per Unit
-- Profit Margin
-
-These features help optimize prices without sacrificing margins.
+### 6. Inventory Features
+Added operational constraints and stock insights:
+- Inventory ratio
+- Days until stock-out
+- Low stock indicator
 
 ---
 
-## 8️⃣ Interaction Features
-To capture non-linear relationships:
+### 7. Profit Features
+Calculated profitability metrics:
+- Total profit
+- Profit per unit
+- Profit margin percentage
 
+---
+
+### 8. Interaction Features
+Created interaction terms to capture combined effects:
 - Weekend × Price
 - Season × Discount
 - Inventory × Price
-- Demand × Discount
-
-Interaction features help the model learn combined effects beyond individual variables.
 
 ---
 
-## 9️⃣ Categorical Encoding
-Categorical variables were encoded using appropriate techniques based on cardinality:
-
-- Product ID
-- Category
-- Brand
-- Store ID
-
-Encoding ensures compatibility with machine learning models.
+### 9. Categorical Encoding
+Converted categorical variables into numerical format using one-hot encoding:
+- Category (if available)
 
 ---
 
-## 🔟 Final Data Cleaning & Preparation
-Before finalizing the dataset:
+### 10. Dynamic Pricing Scenarios
+Simulated multiple pricing strategies to evaluate business impact:
 
-- Missing values were handled
-- Duplicate records were removed
-- Outliers were treated
-- Numerical features were scaled where required
+Price multipliers tested:
+- 0.85 (−15%)
+- 0.99 (−1%)
+- 1.05 (+5%)
+- 1.10 (+10%)
+- 1.15 (+15%)
 
-This ensures data quality and model stability.
+For each scenario, calculated:
+- Predicted Price
+- Predicted Revenue
+- Revenue Lift (%)
+- Predicted Profit
+- Predicted Profit Margin (%)
 
 ---
 
-## ✅ Outcome
-- Dataset is fully **model-ready**
-- Features capture real-world pricing, demand, inventory, and competition behavior
-- Strong foundation for dynamic pricing models
-- Improved interpretability and predictive performance.
+### 11. Data Cleaning
+Final preprocessing steps:
+- Handled missing values
+- Replaced infinite values
+- Removed duplicates
+- Exported clean dataset
 
+---
+
+## Output
+- **Console Output:** Displays a preview of the engineered dataset (wrapped format is expected for wide tables).
+- **Generated File:**  
+  `customs_sales_features_DYNAMIC_FULL.csv`
 
  
 
