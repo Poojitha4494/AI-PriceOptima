@@ -270,5 +270,95 @@ Final preprocessing steps:
 - **Generated File:**  
   `customs_sales_features_DYNAMIC_FULL.csv`
 
- 
+# 📊 PriceOptima – Milestone 4  
+## Baseline Rule-Based Pricing Engine
+
+---
+
+## 📌 Project Overview
+This repository contains **Milestone 4** of the **PriceOptima Dynamic Pricing Project**.  
+The objective of this milestone is to build a **baseline rule-based pricing engine** that adjusts product prices using **time-based** and **inventory-based** rules and compares the resulting revenue with **static pricing**.
+
+This baseline system acts as a benchmark before implementing machine learning-based pricing models in later milestones.
+
+---
+
+## 🎯 Objective
+Develop a pricing engine that:
+- Applies **time-based pricing rules**
+- Applies **inventory-based pricing rules**
+- Generates a new **rule-based price**
+- Compares **static vs rule-based revenue**
+- Calculates **revenue uplift**
+
+---
+
+## 🧠 Pricing Strategy
+
+### 1️⃣ Time-Based Pricing Rules
+The following rules are applied based on time and demand patterns:
+
+- Increase price on **weekends**
+- Increase price during **festival / peak seasons**
+- Apply a small increase during **month-end**
+- Apply discounts during **low-demand months**
+
+These rules simulate real-world seasonal and demand-driven pricing behavior.
+
+---
+
+### 2️⃣ Inventory-Based Pricing Rules
+Prices are adjusted based on inventory levels:
+
+- **Low inventory:** Increase price due to scarcity
+- **Balanced inventory:** No price change
+- **High inventory:** Apply moderate discount
+- **Overstock:** Apply clearance pricing
+
+These rules reflect practical retail inventory management strategies.
+
+---
+
+## 🛠️ Implementation Details
+
+### Rule-Based Price Generation
+- A new column called **`rule_price`** is created.
+- The original price is copied and adjusted **sequentially** using:
+  1. Inventory-based rules
+  2. Time-based rules
+
+This ensures logical and realistic price adjustments.
+
+---
+
+### Revenue Calculation
+Two revenue metrics are calculated:
+
+- **Static Revenue**
+Static Revenue = Original Price × Units Sold
+
+
+- **Rule-Based Revenue**
+ Rule-Based Revenue = Rule Price × Units Sold
+
+
+---
+
+### Revenue Lift Calculation
+Revenue uplift is calculated as:
+
+
+
+Revenue Lift = Rule-Based Revenue − Static Revenue
+Revenue Lift (%) = (Revenue Lift / Static Revenue) × 100
+
+---
+
+## 📈 Results
+- Rule-based pricing dynamically adjusts prices based on demand and stock conditions.
+- Revenue comparison demonstrates improvement over static pricing.
+- The baseline engine provides a strong foundation for advanced pricing models.
+
+
+
 
