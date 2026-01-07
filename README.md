@@ -593,10 +593,10 @@ This demonstrates real-time model inference and seamless backend–frontend inte
 ## Screenshots
 
 ### FastAPI Swagger UI
-![Swagger](swagger_ui_success.png.png)
+![Swagger](swagger_ui_success.png)
 
 ### React Dashboard – Price Prediction
-![dashboard](dashboard_ui.png.png)
+![dashboard](dashboard_ui.png)
 ---
 
 ### Conclusion and Future Enhancements
