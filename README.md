@@ -134,117 +134,160 @@ Profit Difference
 The Custom Walmart Sales Dataset is clean, validated, and ready for dynamic pricing analysis.
 All KPIs needed for Milestone 1 are implemented and prepared for future ML modeling.
 
-# 📊 Feature Engineering – PriceOptima Dynamic Pricing Project
+# 🧠 Feature Engineering – PriceOptima Dynamic Pricing Project
 
 ## 📌 Overview
-This module covers the **Feature Engineering phase** of the **PriceOptima Dynamic Pricing Project**.  
-The objective is to convert raw transactional, pricing, demand, inventory, and competitor data into **meaningful, machine-learning-ready features** that help the model understand:
+This milestone focuses on **Feature Engineering**, a critical step in the PriceOptima Dynamic Pricing Project.  
+The objective of this phase is to transform raw data into **meaningful, structured, and model-ready features** that help capture:
 
-- Demand patterns
-- Pricing behavior
-- Seasonality & festivals
+- Demand behavior
+- Pricing trends
+- Seasonality & time effects
 - Inventory conditions
-- Competitor influence
+- Competitive influence
 - Profitability impact
+
+All required feature engineering tasks have been successfully implemented.
 
 ---
 
-## 🧩 Feature Engineering Tasks
+## 🎯 Objective
+- Enhance raw data with informative features
+- Improve model understanding of real-world pricing dynamics
+- Prepare a clean, structured dataset for modeling and deployment
 
-### 1️⃣ Time-Based Features
-Features created to capture temporal patterns and seasonality:
+---
+
+## 🧩 Feature Engineering Tasks Completed
+
+---
+
+## 1️⃣ Time-Based Features
+To capture seasonality and temporal demand patterns, the following features were created:
+
 - Day
 - Month
 - Year
 - Day of Week
-- Weekend Flag
-- Season (Summer / Monsoon / Winter)
+- Weekend Indicator
+- Season (e.g., Summer / Monsoon / Winter)
 - Festival / Holiday Indicator
+
+These features help identify demand fluctuations over time.
 
 ---
 
-### 2️⃣ Price-Based Features
-To analyze pricing behavior and short-term fluctuations:
+## 2️⃣ Price-Based Features
+To model pricing behavior and changes:
+
 - Lag Price (Previous Day)
 - Lag Price (7-Day)
 - Price Change Percentage
 - Discount Percentage
 
+These features allow the model to understand short-term price movements and discount effects.
+
 ---
 
-### 3️⃣ Demand Features (Lag & Rolling)
-To model demand trends and stability:
+## 3️⃣ Demand Features (Lag & Rolling)
+To capture demand trends and variability:
+
 - Lag Sales (1-Day, 7-Day, 30-Day)
 - Rolling Average Sales (7-Day, 30-Day)
 - Demand Volatility (Standard Deviation of Sales)
 
+These features help model momentum, seasonality, and uncertainty in demand.
+
 ---
 
-### 4️⃣ Price Elasticity Features
-To understand customer price sensitivity:
+## 4️⃣ Price Elasticity Features
+To understand customer sensitivity to price changes:
+
 - Price Elasticity Calculation
 - Elasticity Classification:
   - High Elasticity
   - Medium Elasticity
   - Low Elasticity
 
+This enables differentiated pricing strategies across products.
+
 ---
 
-### 5️⃣ Competitor Features (If Available)
-To capture market competition:
+## 5️⃣ Competitor Features (Where Available)
+To incorporate market competition:
+
 - Competitor Price Difference
 - Competitor Price Index
 - Competitor-Cheaper Indicator
 
+These features allow pricing decisions to respond to competitor behavior.
+
 ---
 
-### 6️⃣ Inventory Features
-To align pricing decisions with stock conditions:
+## 6️⃣ Inventory Features
+To align pricing with stock conditions:
+
 - Inventory Ratio
 - Days Until Stock-Out
 - Low-Stock Indicator
 - Overstock Indicator
 
+These features ensure inventory-aware pricing decisions.
+
 ---
 
-### 7️⃣ Profit Features
-To balance revenue optimization and profitability:
+## 7️⃣ Profit Features
+To balance revenue and profitability:
+
 - Profit per Unit
 - Profit Margin
 
+These features help optimize prices without sacrificing margins.
+
 ---
 
-### 8️⃣ Interaction Features
+## 8️⃣ Interaction Features
 To capture non-linear relationships:
+
 - Weekend × Price
 - Season × Discount
 - Inventory × Price
 - Demand × Discount
 
+Interaction features help the model learn combined effects beyond individual variables.
+
 ---
 
-### 9️⃣ Categorical Encoding
-Categorical attributes were encoded using appropriate techniques:
+## 9️⃣ Categorical Encoding
+Categorical variables were encoded using appropriate techniques based on cardinality:
+
 - Product ID
 - Category
 - Brand
 - Store ID
 
+Encoding ensures compatibility with machine learning models.
+
 ---
 
-### 🔟 Final Data Cleaning & Preparation
-Final preprocessing steps include:
-- Handling missing values
-- Removing duplicates
-- Treating outliers
-- Scaling numerical features (where required)
+## 🔟 Final Data Cleaning & Preparation
+Before finalizing the dataset:
+
+- Missing values were handled
+- Duplicate records were removed
+- Outliers were treated
+- Numerical features were scaled where required
+
+This ensures data quality and model stability.
 
 ---
 
 ## ✅ Outcome
-After completing feature engineering:
-- Dataset is **fully model-ready**
-- Features reflect **real-world pricing and demand behavior**
-- Improved model accuracy, stability, and interpretability
-- Strong foundation for **dynamic pricing predictions**
+- Dataset is fully **model-ready**
+- Features capture real-world pricing, demand, inventory, and competition behavior
+- Strong foundation for dynamic pricing models
+- Improved interpretability and predictive performance.
+
+
+ 
 
